@@ -2,13 +2,14 @@ local config = function()
   local telescope = require("telescope")
   telescope.setup({
     defaults = {
+      cache_picker = true,
+      path_display = { "tail" },
       mappings = {
         i = {
           ["<C-j>"] = "move_selection_next",
           ["<C-k>"] = "move_selection_previous",
         },
       },
-      cache_picker = true,
     },
     pickers = {
       find_files = {
@@ -36,7 +37,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
-    -- { "nvim-telescope/telescope-fzf-native.nvim", build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+    { "nvim-telescope/telescope-fzf-native.nvim", build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
   },
   keys = {
     vim.keymap.set('n', "<leader>fk", ":Telescope keymaps<cr>", { desc = "Show Keymaps" }),
@@ -46,5 +47,6 @@ return {
     vim.keymap.set('n', "<leader>fc", ":Telescope grep_string<cr>", { desc = "Live Grep" }),
     vim.keymap.set('n', "<leader>fb", ":Telescope buffers<cr>", { desc = "Find Buffers" }),
     vim.keymap.set('n', "<leader>fr", ":Telescope resume<cr>", { desc = "Resume last picker" }),
+    vim.keymap.set('n', "<leader>fn", ":Telescope git_files<cr>", { desc = "Git Files" }),
   },
 }

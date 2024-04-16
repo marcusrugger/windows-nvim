@@ -42,14 +42,14 @@ vim.opt.wrap = false
 
 -- [[ Line Numbers ]]
 vim.opt.number = true                       -- bool: Show line numbers
-vim.opt.relativenumber = true               -- bool: Show line numbers relative to the line with the cursor
+vim.opt.relativenumber = false              -- bool: Show line numbers relative to the line with the cursor
 
 -- [[ Behavior ]]
 vim.opt.errorbells = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = false
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 10
 vim.opt.virtualedit = "block"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -102,9 +102,9 @@ vim.cmd [[let &shellcmdflag = '-s']]
 
 -- nvim-tree
 vim.keymap.set('n', "<leader>n", ":NvimTreeToggle<cr>")
-vim.keymap.set('n', "<C-j>", "<C-e>")
+-- vim.keymap.set('n', "<C-j>", "<C-e>")
 -- vim.keymap.set('n', "<C-k>", "<C-y>")
--- vim.keymap.set('n', "<C-h>", "<C-w>h")
+ vim.keymap.set('n', "<C-h>", "<C-w>h")
 vim.keymap.set('n', "<C-l>", "<C-w>l")
 
 local nvimtree = require('nvim-tree.api')
