@@ -63,8 +63,11 @@ vim.opt.termguicolors = true                -- bool: If term supports ui color t
 -- Configure plugins
 -- **********************************************
 
+-- ThemePlugin = "catppuccin/nvim"
+-- ThemeName = "catppuccin-latte"
+
 ThemePlugin = "rebelot/kanagawa.nvim"
-ThemeName = "kanagawa-dragon"
+ThemeName = "kanagawa-wave"
 
 local lazy_plugins = {
   { import = "plugins" },
@@ -152,7 +155,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'gd', ":Telescope lsp_definitions<cr>", opts) -- vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)

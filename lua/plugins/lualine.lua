@@ -1,7 +1,7 @@
 local config = function()
   require("lualine").setup({
     options = {
-      theme = "kanagawa",
+      -- theme = "kanagawa",
       -- theme = "catppuccin",
       globalstatus = true,
       component_separators = { left = "|", right = "|" },
@@ -20,7 +20,7 @@ end
 
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { ThemePlugin },
+  -- dependencies = { ThemePlugin },
   -- dependencies = { "catppuccin/nvim" },
   lazy = false,
   config = config,
