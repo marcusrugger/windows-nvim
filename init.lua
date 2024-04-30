@@ -63,11 +63,11 @@ vim.opt.termguicolors = true                -- bool: If term supports ui color t
 -- Configure plugins
 -- **********************************************
 
--- ThemePlugin = "catppuccin/nvim"
--- ThemeName = "catppuccin-latte"
+ThemePlugin = "marcusrugger/catppuccin-nvim"
+ThemeName = "catppuccin-dark"
 
-ThemePlugin = "rebelot/kanagawa.nvim"
-ThemeName = "kanagawa-wave"
+-- ThemePlugin = "rebelot/kanagawa.nvim"
+-- ThemeName = "kanagawa-wave"
 
 local lazy_plugins = {
   { import = "plugins" },
